@@ -1,0 +1,104 @@
+/* --- Global Resets & Base Styles --- */
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif; /* Using Roboto, fallback to Arial/sans-serif */
+    background-color: #f4f7f6; /* Light grayish background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top, then use margin for container */
+    min-height: 100vh;
+    padding-top: 40px; /* Space from the top of the viewport */
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff; /* White background for the main content area */
+    padding: 30px 40px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 90%;
+    max-width: 500px; /* Max width for the container */
+    text-align: center; /* Center content within the container */
+}
+
+/* --- Header & Heading --- */
+header h1 {
+    color: #2c3e50; /* Dark blue-gray for heading */
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0; /* Subtle underline */
+    padding-bottom: 15px;
+}
+
+/* --- Navigation Buttons --- */
+.main-nav {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Space between buttons */
+}
+
+.nav-button {
+    background-color: #3498db; /* A nice blue */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; /* Or block if you want them full width */
+    font-size: 1em;
+    font-weight: 500;
+    margin: 0; /* Reset default button margin */
+    cursor: pointer;
+    border-radius: 6px; /* Rounded corners for buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Slight shadow for buttons */
+}
+
+.nav-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.nav-button:active {
+    background-color: #2471a3; /* Even darker blue on click */
+    transform: translateY(0);
+}
+
+/* --- Specific Button Variations (Optional) --- */
+/* Example: A "danger" button for delete */
+.nav-button.delete { /* Add class="delete" to the delete button if you want this */
+    background-color: #e74c3c; /* Red for delete */
+}
+.nav-button.delete:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Example: A "secondary" button for less prominent actions */
+.nav-button.secondary { /* Add class="secondary" to a button if you want this */
+    background-color: #7f8c8d; /* Gray */
+    color: white;
+}
+.nav-button.secondary:hover {
+    background-color: #6c7a7d; /* Darker gray */
+}
+
+
+/* --- Responsive Adjustments (Optional, for smaller screens) --- */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .nav-button {
+        padding: 12px 20px;
+        font-size: 0.95em;
+    }
+}
